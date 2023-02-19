@@ -9,11 +9,15 @@ public class ArmstrongOrPerfectOrPalindrome {
         if(Armstrong(n)){
             System.out.println("yes, it is armstrong number");
         }
-        if(perfect(n)){
+        else if(perfect(n)){
             System.out.println("Yes, it is perfect number");
         }
-        if(palindrome(n))
+        else if(palindrome(n))
             System.out.println("Yes, it is palindrome");
+        else{
+            System.out.println("No, it is not armstrong or perfect or palindrome number");
+        }
+
 
     }
     static boolean Armstrong(int n){
