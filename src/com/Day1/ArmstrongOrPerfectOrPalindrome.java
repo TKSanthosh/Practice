@@ -17,31 +17,22 @@ public class ArmstrongOrPerfectOrPalindrome {
         else{
             System.out.println("No, it is not armstrong or perfect or palindrome number");
         }
-
-
     }
     static boolean Armstrong(int n){
-        int temp = n,count =0,sum =0;
+        int temp = n,temp2 = n,count =0,sum =0;
         while(temp > 0){
             temp = temp/10;
             count++;
         }
        while(n > 0){
            temp = n%10;
-           sum = sum + power(temp,count);
+           sum = (int) (sum + Math.pow(temp,count));
            n = n / 10;
        }
-       if(sum == n){
+       if(sum == temp2){
            return true;
        }
        return false;
-    }
-    static int power(int a,int b){
-        int temp = a;
-        for(int i=0;i<b;i++){
-            a+=temp;
-        }
-        return a;
     }
     static boolean perfect(int a){
         int sum = 0;
