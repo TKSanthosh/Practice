@@ -2,6 +2,10 @@ package com.Inheritance.Person;
 
 public class Student extends Person{
     private String college;
+    Student(String name){
+        super(name);
+
+    }
 
     public String getCollege() {
         return college;

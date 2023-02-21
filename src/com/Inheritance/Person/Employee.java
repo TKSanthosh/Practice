@@ -4,6 +4,10 @@ public class Employee extends Person {
     private String title;
     private char employeeGrade;
     private int salary;
+    Employee(String name,String title){
+        super(name);
+        this.title = title;
+    }
 
     public String getTitle() {
         return title;
@@ -29,7 +33,7 @@ public class Employee extends Person {
     }
 
 
-    public String tostring(){
+    public String toString(){
         return super.toString() + "   "+ title +" "+ employeeGrade;
     }
 
