@@ -26,7 +26,7 @@ public class ArmstrongOrPerfectOrPalindrome {
         }
        while(n > 0){
            temp = n%10;
-           sum = (int) (sum + Math.pow(temp,count));
+           sum = (sum + power(temp,count));
            n = n / 10;
        }
        if(sum == temp2){
@@ -52,5 +52,12 @@ public class ArmstrongOrPerfectOrPalindrome {
             n = n/10;
         }
         return (sum == temp)?true:false;
+    }
+    static int power(int a,int b){
+        int temp = 1;
+        for(int i=0;i<b;i++){
+            temp*=a;
+        }
+        return temp;
     }
 }
