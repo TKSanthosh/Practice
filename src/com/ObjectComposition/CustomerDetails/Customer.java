@@ -1,4 +1,6 @@
-package com.ObjectComposition;
+package com.ObjectComposition.CustomerDetails;
+
+import com.ObjectComposition.CustomerDetails.Address;
 
 public class Customer {
     private String name;
@@ -22,7 +24,7 @@ public class Customer {
         return workAddress;
     }
     public String toString(){
-        return String.format("name - %s , HomeAddress : %s,WorkAddress - %s ",name,homeAddress,workAddress) ;
+        return String.format("name - %s , \nHomeAddress : %s,\nWorkAddress - %s ",name,homeAddress,workAddress) ;
     }
 
 }

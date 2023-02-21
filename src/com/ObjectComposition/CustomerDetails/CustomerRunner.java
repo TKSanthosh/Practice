@@ -1,4 +1,7 @@
-package com.ObjectComposition;
+package com.ObjectComposition.CustomerDetails;
+
+import com.ObjectComposition.CustomerDetails.Address;
+import com.ObjectComposition.CustomerDetails.Customer;
 
 public class CustomerRunner {
     public static void main(String[] args) {

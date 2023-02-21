@@ -1,4 +1,4 @@
-package com.ObjectComposition;
+package com.ObjectComposition.CustomerDetails;
 
 public class Address {
     String doorNo;
