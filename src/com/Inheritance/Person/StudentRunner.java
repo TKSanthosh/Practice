@@ -6,8 +6,7 @@ public class StudentRunner {
         Student student1 = new Student();
         student1.setName("san");
         student1.setEmailAddress("tksan");
-        System.out.println(student1.getName())
-        ;
+        System.out.println(student1.getName());
 
     }
 }
