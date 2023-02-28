@@ -11,6 +11,12 @@ public class Multithreading {
         }
         book.join();
         updates.join();
+        try {
+            book.start();
+        }
+        catch (Exception e) {
+            System.err.println(e);
+        }
         if(book.isAlive()){
             System.out.println("hi");
         }
@@ -22,7 +28,7 @@ class Book extends Thread{
         for (int i = 0; i <5;i++){
             System.out.println("hello");
             try {
-                Thread.sleep(2000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -34,7 +40,7 @@ class update extends Thread{
         for (int i = 0; i < 5;i++){
             System.out.println(i);
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
