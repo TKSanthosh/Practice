@@ -9,13 +9,13 @@ public class StudentMarks {
         studs.add(new Student(1,12));
         studs.add(new Student(1,100));
 
-        Collections.sort(studs,(a,b) -> {return a.marks < b.marks ? 1:-1;});
+        Collections.sort(studs);
         System.out.println(studs);
 
 
     }
 }
-class Student{
+class Student implements Comparable<Student> {
     private int rollNo;
     int marks;
     Student(int rollNo, int marks){
@@ -24,5 +24,10 @@ class Student{
     }
     public String toString() {
         return "Student(" + rollNo + ", " + marks + ")";
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return this.marks < o.marks ? 1:-1;
     }
 }
