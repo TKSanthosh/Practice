@@ -16,7 +16,7 @@ class bike implements vehicle{
 }
 
 class gettingVehicle{
-    public static vehicle getVehicle(String s){
+    public vehicle getVehicle(String s){
         if(s.equals("bike")){
             return new bike();
         }
