@@ -1,7 +1,9 @@
 package com.MultiThreading.InterThread;
+
 class Q {
     int num;
     boolean valueset = false;
+
     public synchronized void put(int num) {
         this.num = num;
         while (valueset) {
@@ -14,21 +16,20 @@ class Q {
         valueset = true;
         notify();
     }
-
-
-    public synchronized void get(){
-        while(!valueset) {
+    public synchronized void get() {
+        while (!valueset) {
             try {
                 wait();
             } catch (InterruptedException e) {
             }
         }
 
-        System.out.println("get" +num);
+        System.out.println("get" + num);
         valueset = false;
         notify();
     }
 }
+
 class Producer implements Runnable {
     Q q;
 
@@ -48,17 +49,23 @@ class Producer implements Runnable {
         }
     }
 }
-class customer implements Runnable{
+
+class customer implements Runnable {
     Q q;
-    public customer(Q q){
+
+    public customer(Q q) {
         this.q = q;
-        Thread t = new Thread(this,"consumer");
+        Thread t = new Thread(this, "consumer");
         t.start();
     }
+
     public void run() {
-        for(int i=1;;i++){
+        for (int i = 1; ; i++) {
             q.get();
-            try{Thread.sleep(1000);}catch(Exception e){}
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+            }
         }
     }
 }

@@ -2,6 +2,7 @@ package com.DesignPatterns.Singleton;
 public class SingleTonClass{
     public static void main(String[] args) {
         singletonclassInstance obj1 = singletonclassInstance.getInstance("hello");
+
     }
 }
 class singletonclassInstance {

@@ -2,6 +2,8 @@ package com.DesignPatterns.Singleton;
 
 public class Singleton {
     public static void main(String[] args) {
+        abc obj = abc.getInstance();
+        //System.out.println();
 
     }
 }
